@@ -96,12 +96,12 @@ function App() {
                 </motion.button>
 
                 {/* Modal Image Container - Full Size, No Padding */}
-                <div className="relative flex items-center justify-center h-64 sm:h-80 md:h-96">
+                <div className="relative flex items-center justify-center max-w-full max-h-[70vh]">
                   {selectedCert.image ? (
                     <img
                       src={selectedCert.image}
                       alt={selectedCert.title}
-                      className="w-full h-full object-fill"
+                      className="block h-full w-full max-w-full max-h-[70vh] object-contain"
                     />
                   ) : (
                     <Award className="w-24 h-24 text-purple-400/50" />

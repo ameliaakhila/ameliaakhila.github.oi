@@ -179,14 +179,14 @@ export default function Skills({ darkMode }) {
                   </h4>
 
                   {/* Level Badge */}
-                  <span
+                  {/* <span
                     className={`skill-font skill-badge text-xs sm:text-[10px] font-semibold px-2 sm:px-2.5 py-0.5 rounded-full border backdrop-blur ${getLevelBadgeColor(
                       skill.level
                     )}`}
                   >
                     {skill.level.charAt(0).toUpperCase() +
                       skill.level.slice(1)}
-                  </span>
+                  </span> */}
                 </motion.div>
               ))}
             </motion.div>
@@ -195,7 +195,7 @@ export default function Skills({ darkMode }) {
         </div>
 
               {/* Proficiency Legend */}
-        <div className="grid m-20 grid-cols-3 lg:gap-4 mt-10">
+        {/* <div className="grid m-20 grid-cols-3 lg:gap-4 mt-10">
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
                 <div className="w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-emerald-500"></div>
@@ -232,7 +232,7 @@ export default function Skills({ darkMode }) {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
       </div>
     </section>
   );

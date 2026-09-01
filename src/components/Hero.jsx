@@ -2,25 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Github, Linkedin, Mail, Code2 } from "lucide-react";
 
 export default function Hero({ darkMode }) {
-  // Generate unique code untuk download CV
-  const generateUniqueCode = () => {
-    const timestamp = Date.now();
-    const randomCode = Math.random().toString(36).substring(2, 10).toUpperCase();
-    return `${randomCode}${timestamp}`;
-  };
-
-  // Handle download CV dengan unique code
-  const handleDownloadCV = (e) => {
-    e.preventDefault();
-    const uniqueCode = generateUniqueCode();
-    const link = document.createElement('a');
-    link.href = 'cv/CV-Amelia-Akhila-Aqna.pdf';
-    link.download = `Amelia_Akhila_Aqna_CV_${uniqueCode}.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section
       id="home"
@@ -135,16 +116,18 @@ export default function Hero({ darkMode }) {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-5 md:gap-6 pt-8 sm:pt-6"
             >
-              <motion.button
-                onClick={handleDownloadCV}
+              <motion.a
+                href="/cv/CV-Amelia-Akhila-Aqna.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`btn-primary flex items-center justify-center gap-2 w-full sm:w-auto ${
                   darkMode ? "shadow-blue-500/30" : "shadow-blue-400/30"
                 }`}
               >
-                Download CV <ArrowRight className="w-5 h-5" />
-              </motion.button>
+                See My CV <ArrowRight className="w-5 h-5" />
+              </motion.a>
 
               <motion.a
                 href="#contact"

@@ -156,7 +156,7 @@ export default function Certificates({ darkMode, setSelectedCert }) {
                           darkMode ? "text-gray-400" : "text-gray-600"
                         }`}
                       >
-                        Published by <span className="text-purple-600 fw-bolder">{cert.issuer}</span>
+                        Published by a <span className="text-purple-600 fw-bolder">{cert.issuer}</span>
                       </p>
                     </div>
                   </div>
